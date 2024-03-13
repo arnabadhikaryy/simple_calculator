@@ -14,42 +14,59 @@
 <body>
     <div><input id="iinput" type="text"></div>
     <div id="calculator">
-        <div><button id="a1" value="1" onclick="()=>{document.getElementById(`iinput`).value=document.getElementById(`a1`).value;}">1</button>
-            <button id="a2" value="2">2</button>
-            <button id="a3" value="3">3</button>
-            <button id="add" value="+">+</button></div>
+        <div><button id="a1" value="1" onclick="display(this.value)">1</button>
+            <button id="a2" value="2" onclick="display(this.value)">2</button>
+            <button id="a3" value="3" onclick="display(this.value)">3</button>
+            <button id="add" value="+" onclick="display(this.value)">+</button></div>
         </div>
 
     </div>
 
-    <div><button id="a4" value="4">4</button>
-        <button id="a5" value="5">5</button>
-        <button id="a6" value="6">6</button>
-        <button id="mines" value="-">-</button></div>
+    <div><button id="a4" value="4" onclick="display(this.value)">4</button>
+        <button id="a5" value="5" onclick="display(this.value)">5</button>
+        <button id="a6" value="6" onclick="display(this.value)">6</button>
+        <button id="mines" value="-" onclick="display(this.value)">-</button></div>
     </div>
 </div>
 
 <div>
-    <button id="a7" value="7">7</button>
-    <button id="a8" value="8">8</button>
-    <button id="a9" value="9">9</button>
-    <button id="devid" value="/">/</button>
+    <button id="a7" value="7" onclick="display(this.value)">7</button>
+    <button id="a8" value="8" onclick="display(this.value)">8</button>
+    <button id="a9" value="9" onclick="display(this.value)">9</button>
+    <button id="devid" value="/" onclick="display(this.value)">/</button>
 </div>
 </div>
 
 <div>
-    <button id="a0" value="0">0</button>
-    <button id="into" value="*">*</button>
+    <button id="a0" value="0" onclick="display(this.value)">0</button>
+    <button id="b0" onclick="calculate()">=</button>
+    <button onclick="Clear()">c</button>
+    <button id="into" value="*" onclick="display(this.value)">*</button>
 </div>
 <div
   
 </div>
 
 <script>
-    function display(){
-     console.log(ID);
-        // document.getElementById("input").value=document.getElementById(ID).value;
+   function display(value) {
+    document.getElementById("iinput").value += value;
+}
+
+function Clear() {
+    document.getElementById("iinput").value ="";
+}
+
+function calculate(){
+   let x=document.getElementById("iinput").value;
+    //console.log(x);
+    try {
+        result=eval(x);
+        document.getElementById("iinput").value=result;
+    } catch (error) {
+        document.getElementById("iinput").value="error";
+      //  console.log(error);
     }
+}
 </script>
 </body>
 </html>
