@@ -5,14 +5,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        button{
+            margin: 10px;
+        }
+    </style>
 </head>
 <body>
-    <div><input id="input" type="number"></div>
+    <div><input id="iinput" type="text"></div>
     <div id="calculator">
-        <div><button id="a1" value="1">1</button></div>
-        <div><button id="a2" value="2">2</button></div>
-        <div><button id="a3" value="3">3</button></div>
+        <div><button id="a1" value="1" onclick="()=>{document.getElementById(`iinput`).value=document.getElementById(`a1`).value;}">1</button>
+            <button id="a2" value="2">2</button>
+            <button id="a3" value="3">3</button>
+            <button id="add" value="+">+</button></div>
+        </div>
+
     </div>
+
+    <div><button id="a4" value="4">4</button>
+        <button id="a5" value="5">5</button>
+        <button id="a6" value="6">6</button>
+        <button id="mines" value="-">-</button></div>
+    </div>
+</div>
+
+<div>
+    <button id="a7" value="7">7</button>
+    <button id="a8" value="8">8</button>
+    <button id="a9" value="9">9</button>
+    <button id="devid" value="/">/</button>
+</div>
+</div>
+
+<div>
+    <button id="a0" value="0">0</button>
+    <button id="into" value="*">*</button>
+</div>
+<div
+  
+</div>
+
+<script>
+    function display(){
+     console.log(ID);
+        // document.getElementById("input").value=document.getElementById(ID).value;
+    }
+</script>
 </body>
 </html>
-document.getElementById("input").value
+
